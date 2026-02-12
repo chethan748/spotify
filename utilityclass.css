@@ -1,0 +1,28 @@
+/* .border{
+    border: 2px solid red;
+    margin: 10px;
+
+    
+} */
+.flex{
+    display: flex;
+}
+.jc{
+    justify-content: center;
+}
+.ai{
+    align-items: center;
+}
+.bg-black{
+    background-color: black;
+    color: white
+}
+.invert{
+    filter: invert(1);
+}
+.bggrey{
+    background-color: #131313;
+}
+.cornerround{
+    border-radius: 7px;
+}

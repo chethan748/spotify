@@ -1,0 +1,434 @@
+*{
+    padding: 0;
+    margin: 0;
+ 
+}
+body{
+    background-color: black;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 300;
+}
+ .container{
+    height:auto;
+     
+ }
+.left{
+    width: 25vw;
+   
+ 
+}
+.home{
+    padding: 10px;
+    height: auto;
+   
+
+}
+.right{
+    width: 75vw;
+    margin: 10px 10px 10px 0px;
+     position: relative;
+    
+}
+.home ul li{
+    width: 14px;
+    list-style: none;
+    display: flex;
+gap: 3px;
+padding: 7px;
+
+}
+
+.m-1{
+    margin:10px;
+}
+.library{
+   
+    margin-top: 10px;
+
+    min-height: 67vh;
+   
+    
+}
+.playlisticon  img{
+    width: 25px;
+    color: white;
+    
+}
+.playlisticon span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+
+}
+.playlisticon {
+    height: 40px;
+    display: flex;
+  
+    justify-content: space-between;
+    font-size: 18px;
+    gap: 10px;
+    padding: 15px;
+}
+.header{
+    height: 68px;;
+    
+}
+footer{
+    background-color: #131313;
+    display:flex;
+    flex-direction: column;
+
+    margin: 20px;
+   
+   
+   
+    gap: 10px;
+     
+    
+
+
+}
+footer a{
+    
+
+    color: grey;
+    font-size: 12px;
+   
+    padding: 5px;
+    
+     
+}
+footer img{
+    background-color: #131313;
+    width:18px;
+ 
+}
+.gbutton{
+    background-color: #131313;
+    border: none;
+}
+nav{
+    display: flex;
+    justify-content: ceenter;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #202020;
+    height: 34px;
+
+    padding: 20px;;
+   
+}
+nav button{
+    background-color: transparent;
+    border: none ;
+    display: inline-block;
+   
+
+}
+.sandlbutton{
+    display: inline-block;
+    gap: 10px;
+   
+}
+.login{
+    height: 48px;
+    width: 103px;
+    border-radius: 50px;;
+    background-color: white;
+    font-size: 17px;;
+    font-weight:600;
+
+}
+.signup{
+    
+    color: #b3b3b3;
+    padding-right: 20px;
+    font-size: 17px;;
+    font-weight: 400;
+}
+.rbb,.lbb{
+    background-color: black;
+    border-radius: 70px;
+   
+
+}
+.create{
+    width: 90px;
+     border-radius: 50px;;
+      background-color: #202020;
+      color: #b3b3b3;
+ font-size: 17px;;
+    font-weight:600;
+    border: none;
+    
+}
+.createplaylist{
+    background-color: #202020;
+    width: 94%;
+    margin: auto;
+    border-radius: 7px;
+    height: auto;
+    padding: 20px;
+box-sizing: border-box;
+margin-bottom: 10px;
+display: flex;
+
+}
+.createplaylist p{
+    padding: 10px;
+}
+.createplaylist button{
+    margin-left: 20px;
+    height: 35px;
+   width: 120px;
+    border-radius: 50px;;
+    background-color: white;
+    font-size: 14px;;
+    font-weight:600;
+    border:none;
+    
+
+
+}
+.sdfghjklt{
+  margin:30px;
+
+    background-color: yellow;
+      background-color: #202020;
+    width: 94%;
+    margin: auto;
+    border-radius: 7px;
+    /* height: 133px; */
+    height: auto;
+    padding: 20px;
+box-sizing: border-box;
+
+
+}
+.sdfghjklt button{
+     margin-left: 20px;
+    height: 35px;
+   width: 120px;
+    border-radius: 50px;;
+    background-color: white;
+    font-size: 14px;;
+    font-weight:600;
+    border:none;
+}
+.sdfghjklt p{
+    padding: 10px;
+}
+.lastcontent{
+     background: linear-gradient(90deg, #8132c3 0%, #3a75e0 100%);;
+    height: 70px;
+   
+width: 98.5vw;
+margin: auto;
+border-radius: 7px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+justify-content: space-between;
+}
+.lastcontent{
+ position: sticky;
+  bottom: 10px;
+}
+.lastcontent div{
+    padding-left: 20px;
+    padding-top: 10px;
+     padding-bottom: 10px;
+     display: inline-block;
+    
+}
+.lastcontent p{
+    padding: 3px;
+    font-size: 17px;;
+    color: white;
+    font-weight: 600;
+   
+
+}
+
+.suff button{
+    
+    height: 48px;
+    width: 177px;
+    border-radius: 50px;;
+    background-color: white;
+    font-size: 17px;;
+    font-weight:600;
+    border: none;
+ margin-right: 20px;
+
+
+    
+}
+
+.gbutton{
+    width:100px;
+    height:35px;
+    border: 1px solid  grey;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 300;
+
+
+}
+.twobox{
+    height: 240px;       
+  overflow-y: auto;    
+  overflow-x: hidden;
+}
+/* .twobox {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;    
+    overflow-y: scroll;       
+} */
+
+
+.twobox::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+.text {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+
+ }
+ .text a{
+    text-decoration: none;
+    
+ }
+.cookies{ 
+    font-size: 14px;
+    color: white;
+}
+.class{
+    width: 100px;
+    color: white;
+    background-color: white;;
+
+}
+.trend{
+  
+   font-size: 30px;
+   font-weight: 700;
+  
+}
+.trendlist{
+     width: 99%;
+  height: 300px;;
+  background-color: transparent;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+ 
+}
+.trend1{
+ width: 188px; 
+  height: 274px;
+  color: white;
+  background-color: transparent;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+    
+
+}
+.maincontent{
+    padding: 20px;
+}
+.songimg {
+   
+    height: 166px;
+    width:  166px;
+    background-size: contain;
+    padding: 10px;
+    border-radius: 7px;
+
+
+   
+}
+.trend1 span{
+    border-radius: 7px;
+}
+
+.songinfo{
+    height: 30%;
+        display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0px 10px 10px  10px;  
+    gap: 5px;
+   
+}
+.title{
+    color: white;
+       font-weight: 600;
+
+}
+.artist{
+    color: #b3b3b3;
+    font-weight: 600;
+
+}
+.trendlist::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+.playbar{
+    width: 98%;
+     height: 50px;
+    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 7px;
+    color: white;
+}
+ul{
+    list-style: none ;
+}
+.songslist{
+    display: flex;
+    gap: 10px;;
+}
+.songslist li{
+    width: 95%;
+    height: 60px;
+    border-radius: 7px;;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 10px 0px 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+
+}
+.music{
+    padding: 10px;
+}
+
