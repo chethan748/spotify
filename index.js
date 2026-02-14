@@ -20,7 +20,7 @@ async function getsong(){
 
 let audio = new Audio();
 let currentSong = "";
-let currentLi = null;   // track which button is active
+let currentLi = `<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>`
 
 const playmusic = (track, li) => {
 
@@ -30,23 +30,34 @@ const playmusic = (track, li) => {
         audio.play();
         currentSong = track;
 
-        // reset old button
+       
         if (currentLi) {
-            currentLi.querySelector(".btn").innerHTML = "▶";
+          //
+        
+             div=document.querySelector(".icons").querySelector(".play").innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>`
+            
+
         }
 
-        // set new button
-        li.querySelector(".btn").innerHTML = "⏸";
+       
+        li.querySelector(".btn").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg>`
+          div=document.querySelector(".icons").querySelector(".play").innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg>`
         currentLi = li;
     }
-    // same song → toggle
+ 
     else {
         if (audio.paused) {
             audio.play();
-            li.querySelector(".btn").innerHTML = "⏸";
+            li.querySelector(".btn").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg>`
+         div=document.querySelector(".icons").querySelector(".play").innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg>`
+            
         } else {
             audio.pause();
-            li.querySelector(".btn").innerHTML = "▶";
+            li.querySelector(".btn").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>`
+            div=document.querySelector(".icons").querySelector(".play").innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>`
+            
+            
+            
         }
     }
 }
@@ -68,7 +79,7 @@ async function main(){
                       .slice(0,19)}
                 </p>
             </span>
-            <span class="btn">▶</span>
+            <span class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/>'</svg></span>
         </li>
         `;
     }
@@ -79,5 +90,56 @@ async function main(){
         })
     });
 }
+document.querySelector(".play").addEventListener("click", () => {
+ 
+     
+            if (audio.src) {
+                if(audio.paused){
+            audio.play();
+            // Update icon to Pause
+        document.querySelector(".play").innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg>`
+        } else {
+            audio.pause();
+             document.querySelector(".play").innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>`
+            // Update icon to Play40 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>`
+        }
+    }
+            
+    
+    
+});
+document.querySelector(".ham").addEventListener("click",()=>{
+    document.querySelector(".left").style.left="0px";
+    })
+    document.querySelector(".close").addEventListener("click",()=>{
+        document.querySelector(".left").style.left="-100%";
+    })
+main()
 
-main();
+function secondsToMinutesSeconds(seconds) {
+   
+    if (isNaN(seconds) || seconds < 0) {
+        return "00:00";
+    }
+
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+  
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
+
+audio.addEventListener("timeupdate", () => {
+    
+   
+    console.log(audio.currentTime, audio.duration);
+    
+  
+    const timeDisplay = document.querySelector(".songd").innerHTML = `${secondsToMinutesSeconds(audio.currentTime)}/${secondsToMinutesSeconds(audio.duration)}`;
+ 
+});
