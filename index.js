@@ -18,12 +18,37 @@ async function getsong(){
     return song;
 }
 
-// single global audio object
 let audio = new Audio();
+let currentSong = "";
+let currentLi = null;   // track which button is active
 
-const playmusic = (track) => {
-    audio.src = "/songs/" + track;
-    audio.play();
+const playmusic = (track, li) => {
+
+    // new song
+    if (currentSong !== track) {
+        audio.src = "/songs/" + track;
+        audio.play();
+        currentSong = track;
+
+        // reset old button
+        if (currentLi) {
+            currentLi.querySelector(".btn").innerHTML = "▶";
+        }
+
+        // set new button
+        li.querySelector(".btn").innerHTML = "⏸";
+        currentLi = li;
+    }
+    // same song → toggle
+    else {
+        if (audio.paused) {
+            audio.play();
+            li.querySelector(".btn").innerHTML = "⏸";
+        } else {
+            audio.pause();
+            li.querySelector(".btn").innerHTML = "▶";
+        }
+    }
 }
 
 async function main(){
@@ -43,15 +68,14 @@ async function main(){
                       .slice(0,19)}
                 </p>
             </span>
-            <span>▶</span>
+            <span class="btn">▶</span>
         </li>
         `;
     }
 
-    
-    Array.from(songsul.getElementsByTagName("li")).forEach(e=>{
-        e.addEventListener("click", () => {
-            playmusic(e.dataset.song);   
+    Array.from(songsul.getElementsByTagName("li")).forEach(li=>{
+        li.addEventListener("click", () => {
+            playmusic(li.dataset.song, li);
         })
     });
 }
