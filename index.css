@@ -461,7 +461,7 @@ ul{
 }
 .ham{
     display: none;
-    display: block;
+    
 }
 .close{
     display: none;
@@ -497,7 +497,25 @@ ul{
         display: block;
         
     }
+    .playbar{
+        height: 200px;
+        display: flex;
+        justify-content: center;flex-direction: column;
+        
 
+    }
+    .icons{
+        padding: 20px;
+        
+    }
+
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;;
 }
 .songd{
  
@@ -507,4 +525,51 @@ ul{
   height: auto;
   width: auto;
     color: white;
+}
+.songname{
+    position: absolute;
+    left: 40px;
+    bottom: 19px;
+}
+.volume{
+   
+    width: 100px;
+    position: absolute;
+    right:300px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.volumetracker{
+    border-radius: 50px;
+  
+height: 2px;
+width: 100px;
+background-color: white;
+position: relative;
+
+
+}
+.circlevol{
+    width:  10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    position:  absolute;
+top: -4px;
+right: 0px;
+
+}
+.palybutton{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;;
+    right:1000px;
+    background-color: #8132c3;
+}
+.trend1{
+    position: relative;
 }
